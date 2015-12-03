@@ -10,6 +10,8 @@ import Cocoa
 
 class ComposePostViewController: NSViewController {
 
+    static let storyboardID = "Adian.ComposePostViewController"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
