@@ -15,8 +15,7 @@ class ComposePostViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let mainStoryboard = NSStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        composePostViewController = mainStoryboard.instantiateControllerWithIdentifier(ComposePostViewController.storyboardID) as! ComposePostViewController
+        composePostViewController = ComposePostViewController.instantiate()
     }
     
     override func tearDown() {

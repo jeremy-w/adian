@@ -11,6 +11,17 @@ import Cocoa
 class ComposePostViewController: NSViewController {
 
     static let storyboardID = "Adian.ComposePostViewController"
+    static var storyboard: NSStoryboard? {
+        let mainStoryboard = NSStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        return mainStoryboard
+    }
+
+
+    static func instantiate() -> ComposePostViewController {
+        let instance = storyboard!.instantiateControllerWithIdentifier(storyboardID)
+        return instance as! ComposePostViewController
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
