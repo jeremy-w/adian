@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */; };
+		3FB9E76E1C0FE0F90075074E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76D1C0FE0F90075074E /* ViewController.swift */; };
+		3FB9E7701C0FE0F90075074E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E76F1C0FE0F90075074E /* Assets.xcassets */; };
+		3FB9E7731C0FE0F90075074E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E7711C0FE0F90075074E /* Main.storyboard */; };
+		3FB9E77E1C0FE0F90075074E /* AdianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E77D1C0FE0F90075074E /* AdianTests.swift */; };
+		3FB9E7891C0FE0F90075074E /* AdianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E7881C0FE0F90075074E /* AdianUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FB9E77A1C0FE0F90075074E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FB9E7601C0FE0F90075074E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FB9E7671C0FE0F90075074E;
+			remoteInfo = Adian;
+		};
+		3FB9E7851C0FE0F90075074E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FB9E7601C0FE0F90075074E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FB9E7671C0FE0F90075074E;
+			remoteInfo = Adian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FB9E7681C0FE0F90075074E /* Adian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FB9E76D1C0FE0F90075074E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FB9E76F1C0FE0F90075074E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FB9E7721C0FE0F90075074E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FB9E7741C0FE0F90075074E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB9E7791C0FE0F90075074E /* AdianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB9E77D1C0FE0F90075074E /* AdianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdianTests.swift; sourceTree = "<group>"; };
+		3FB9E77F1C0FE0F90075074E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB9E7841C0FE0F90075074E /* AdianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB9E7881C0FE0F90075074E /* AdianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdianUITests.swift; sourceTree = "<group>"; };
+		3FB9E78A1C0FE0F90075074E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FB9E7651C0FE0F90075074E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7761C0FE0F90075074E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7811C0FE0F90075074E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FB9E75F1C0FE0F90075074E = {
+			isa = PBXGroup;
+			children = (
+				3FB9E76A1C0FE0F90075074E /* Adian */,
+				3FB9E77C1C0FE0F90075074E /* AdianTests */,
+				3FB9E7871C0FE0F90075074E /* AdianUITests */,
+				3FB9E7691C0FE0F90075074E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FB9E7691C0FE0F90075074E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9E7681C0FE0F90075074E /* Adian.app */,
+				3FB9E7791C0FE0F90075074E /* AdianTests.xctest */,
+				3FB9E7841C0FE0F90075074E /* AdianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FB9E76A1C0FE0F90075074E /* Adian */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */,
+				3FB9E76D1C0FE0F90075074E /* ViewController.swift */,
+				3FB9E76F1C0FE0F90075074E /* Assets.xcassets */,
+				3FB9E7711C0FE0F90075074E /* Main.storyboard */,
+				3FB9E7741C0FE0F90075074E /* Info.plist */,
+			);
+			path = Adian;
+			sourceTree = "<group>";
+		};
+		3FB9E77C1C0FE0F90075074E /* AdianTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9E77D1C0FE0F90075074E /* AdianTests.swift */,
+				3FB9E77F1C0FE0F90075074E /* Info.plist */,
+			);
+			path = AdianTests;
+			sourceTree = "<group>";
+		};
+		3FB9E7871C0FE0F90075074E /* AdianUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FB9E7881C0FE0F90075074E /* AdianUITests.swift */,
+				3FB9E78A1C0FE0F90075074E /* Info.plist */,
+			);
+			path = AdianUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FB9E7671C0FE0F90075074E /* Adian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB9E78D1C0FE0F90075074E /* Build configuration list for PBXNativeTarget "Adian" */;
+			buildPhases = (
+				3FB9E7641C0FE0F90075074E /* Sources */,
+				3FB9E7651C0FE0F90075074E /* Frameworks */,
+				3FB9E7661C0FE0F90075074E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Adian;
+			productName = Adian;
+			productReference = 3FB9E7681C0FE0F90075074E /* Adian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FB9E7781C0FE0F90075074E /* AdianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB9E7901C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianTests" */;
+			buildPhases = (
+				3FB9E7751C0FE0F90075074E /* Sources */,
+				3FB9E7761C0FE0F90075074E /* Frameworks */,
+				3FB9E7771C0FE0F90075074E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FB9E77B1C0FE0F90075074E /* PBXTargetDependency */,
+			);
+			name = AdianTests;
+			productName = AdianTests;
+			productReference = 3FB9E7791C0FE0F90075074E /* AdianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FB9E7831C0FE0F90075074E /* AdianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB9E7931C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianUITests" */;
+			buildPhases = (
+				3FB9E7801C0FE0F90075074E /* Sources */,
+				3FB9E7811C0FE0F90075074E /* Frameworks */,
+				3FB9E7821C0FE0F90075074E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FB9E7861C0FE0F90075074E /* PBXTargetDependency */,
+			);
+			name = AdianUITests;
+			productName = AdianUITests;
+			productReference = 3FB9E7841C0FE0F90075074E /* AdianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FB9E7601C0FE0F90075074E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Jeremy W. Sherman";
+				TargetAttributes = {
+					3FB9E7671C0FE0F90075074E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					3FB9E7781C0FE0F90075074E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 3FB9E7671C0FE0F90075074E;
+					};
+					3FB9E7831C0FE0F90075074E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 3FB9E7671C0FE0F90075074E;
+					};
+				};
+			};
+			buildConfigurationList = 3FB9E7631C0FE0F90075074E /* Build configuration list for PBXProject "Adian" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FB9E75F1C0FE0F90075074E;
+			productRefGroup = 3FB9E7691C0FE0F90075074E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FB9E7671C0FE0F90075074E /* Adian */,
+				3FB9E7781C0FE0F90075074E /* AdianTests */,
+				3FB9E7831C0FE0F90075074E /* AdianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FB9E7661C0FE0F90075074E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB9E7701C0FE0F90075074E /* Assets.xcassets in Resources */,
+				3FB9E7731C0FE0F90075074E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7771C0FE0F90075074E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7821C0FE0F90075074E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FB9E7641C0FE0F90075074E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB9E76E1C0FE0F90075074E /* ViewController.swift in Sources */,
+				3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7751C0FE0F90075074E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB9E77E1C0FE0F90075074E /* AdianTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB9E7801C0FE0F90075074E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB9E7891C0FE0F90075074E /* AdianUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FB9E77B1C0FE0F90075074E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FB9E7671C0FE0F90075074E /* Adian */;
+			targetProxy = 3FB9E77A1C0FE0F90075074E /* PBXContainerItemProxy */;
+		};
+		3FB9E7861C0FE0F90075074E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FB9E7671C0FE0F90075074E /* Adian */;
+			targetProxy = 3FB9E7851C0FE0F90075074E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FB9E7711C0FE0F90075074E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FB9E7721C0FE0F90075074E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FB9E78B1C0FE0F90075074E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FB9E78C1C0FE0F90075074E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3FB9E78E1C0FE0F90075074E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Adian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.Adian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FB9E78F1C0FE0F90075074E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Adian/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.Adian;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3FB9E7911C0FE0F90075074E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AdianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.AdianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adian.app/Contents/MacOS/Adian";
+			};
+			name = Debug;
+		};
+		3FB9E7921C0FE0F90075074E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AdianTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.AdianTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Adian.app/Contents/MacOS/Adian";
+			};
+			name = Release;
+		};
+		3FB9E7941C0FE0F90075074E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AdianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.AdianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Adian;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3FB9E7951C0FE0F90075074E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AdianUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremywsherman.AdianUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Adian;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FB9E7631C0FE0F90075074E /* Build configuration list for PBXProject "Adian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB9E78B1C0FE0F90075074E /* Debug */,
+				3FB9E78C1C0FE0F90075074E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB9E78D1C0FE0F90075074E /* Build configuration list for PBXNativeTarget "Adian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB9E78E1C0FE0F90075074E /* Debug */,
+				3FB9E78F1C0FE0F90075074E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FB9E7901C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB9E7911C0FE0F90075074E /* Debug */,
+				3FB9E7921C0FE0F90075074E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3FB9E7931C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB9E7941C0FE0F90075074E /* Debug */,
+				3FB9E7951C0FE0F90075074E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FB9E7601C0FE0F90075074E /* Project object */;
+}

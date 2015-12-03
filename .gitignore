@@ -1,0 +1,72 @@
+# Finder stuff
+.DS_Store
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata/
+project.xcworkspace
+
+# Generated files
+build/
+node_modules/
+*.[oa]
+*.pyc
+*.dSYM/
+a.out
+tags
+*.bundle
+
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+# automatic backup files
+*~.nib
+\.\#*
+\#*\#
+*(Autosaved).*
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+.emacs.desktop
+.emacs.desktop.lock
+# vim
+# foo.md starts with .foo.md.swp and decrements to .foo.md.saa
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Haskell
+.cabal-sandbox/
+cabal.sandbox.config
+*.hi
+cabal-dev
+dist
+.static-cache
+static/tmp
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
+# Idris
+*.ibc
