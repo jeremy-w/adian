@@ -9,7 +9,7 @@
 import XCTest
 @testable import Adian
 
-class AdianTests: XCTestCase {
+class ComposePostViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

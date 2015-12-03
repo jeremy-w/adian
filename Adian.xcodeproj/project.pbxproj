@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */; };
-		3FB9E76E1C0FE0F90075074E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76D1C0FE0F90075074E /* ViewController.swift */; };
+		3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */; };
 		3FB9E7701C0FE0F90075074E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E76F1C0FE0F90075074E /* Assets.xcassets */; };
 		3FB9E7731C0FE0F90075074E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E7711C0FE0F90075074E /* Main.storyboard */; };
-		3FB9E77E1C0FE0F90075074E /* AdianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E77D1C0FE0F90075074E /* AdianTests.swift */; };
+		3FB9E77E1C0FE0F90075074E /* ComposePostViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E77D1C0FE0F90075074E /* ComposePostViewControllerTests.swift */; };
 		3FB9E7891C0FE0F90075074E /* AdianUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E7881C0FE0F90075074E /* AdianUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +35,12 @@
 /* Begin PBXFileReference section */
 		3FB9E7681C0FE0F90075074E /* Adian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FB9E76D1C0FE0F90075074E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostViewController.swift; sourceTree = "<group>"; };
 		3FB9E76F1C0FE0F90075074E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB9E7721C0FE0F90075074E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FB9E7741C0FE0F90075074E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB9E7791C0FE0F90075074E /* AdianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FB9E77D1C0FE0F90075074E /* AdianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdianTests.swift; sourceTree = "<group>"; };
+		3FB9E77D1C0FE0F90075074E /* ComposePostViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostViewControllerTests.swift; sourceTree = "<group>"; };
 		3FB9E77F1C0FE0F90075074E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB9E7841C0FE0F90075074E /* AdianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB9E7881C0FE0F90075074E /* AdianUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdianUITests.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */,
-				3FB9E76D1C0FE0F90075074E /* ViewController.swift */,
+				3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */,
 				3FB9E76F1C0FE0F90075074E /* Assets.xcassets */,
 				3FB9E7711C0FE0F90075074E /* Main.storyboard */,
 				3FB9E7741C0FE0F90075074E /* Info.plist */,
@@ -107,7 +107,7 @@
 		3FB9E77C1C0FE0F90075074E /* AdianTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FB9E77D1C0FE0F90075074E /* AdianTests.swift */,
+				3FB9E77D1C0FE0F90075074E /* ComposePostViewControllerTests.swift */,
 				3FB9E77F1C0FE0F90075074E /* Info.plist */,
 			);
 			path = AdianTests;
@@ -252,7 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB9E76E1C0FE0F90075074E /* ViewController.swift in Sources */,
+				3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */,
 				3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB9E77E1C0FE0F90075074E /* AdianTests.swift in Sources */,
+				3FB9E77E1C0FE0F90075074E /* ComposePostViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +475,7 @@
 				3FB9E78F1C0FE0F90075074E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FB9E7901C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +484,7 @@
 				3FB9E7921C0FE0F90075074E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FB9E7931C0FE0F90075074E /* Build configuration list for PBXNativeTarget "AdianUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +493,7 @@
 				3FB9E7951C0FE0F90075074E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
