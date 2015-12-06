@@ -34,6 +34,12 @@ class ComposePostViewControllerTests: XCTestCase {
     }
 
 
+    func testSendButtonIsDefaultButton() {
+        havingLoadedItsView()
+        XCTAssertEqual(composePostViewController.sendButton.keyEquivalent, "\r")
+    }
+
+
     func havingLoadedItsView() {
         _ = composePostViewController.view
     }
