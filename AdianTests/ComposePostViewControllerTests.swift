@@ -40,6 +40,12 @@ class ComposePostViewControllerTests: XCTestCase {
     }
 
 
+    func testHasMessageField() {
+        havingLoadedItsView()
+        XCTAssertNotNil(composePostViewController.messageField, "nil messageField")
+    }
+
+
     func havingLoadedItsView() {
         _ = composePostViewController.view
     }

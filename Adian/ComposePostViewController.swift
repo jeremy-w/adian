@@ -36,6 +36,10 @@ class ComposePostViewController: NSViewController {
     }
 
 
+    // MARK: Enter Post
+    @IBOutlet var messageField: NSTextView!
+
+
     // MARK: Send Post
     @IBOutlet var sendButton: NSButton!
 
