@@ -9,6 +9,7 @@
 import XCTest
 @testable import Adian
 
+let AnyMessage = "testing!"
 
 class SpyPoster: Poster {
     var receivedMessage: String?
@@ -58,13 +59,12 @@ class ComposePostViewControllerTests: XCTestCase {
 
 
     func testPressingSendButtonSuppliesTextToPoster() {
-        let anyMessage = "testing!"
         havingLoadedItsView()
-        havingTyped(anyMessage)
+        havingTyped(AnyMessage)
 
         composePostViewController.sendButton.performClick(nil)
 
-        XCTAssertEqual(spyPoster.receivedMessage, anyMessage)
+        XCTAssertEqual(spyPoster.receivedMessage, AnyMessage)
     }
 
 
