@@ -23,6 +23,14 @@ class ComposePostViewController: NSViewController {
     }
 
 
+    /// Provides required components not embedded in the storyboard.
+    ///
+    /// Commonly called from `prepareForSegue(_:sender:)`.
+    func configure(poster: Poster) {
+        self.poster = poster
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +50,16 @@ class ComposePostViewController: NSViewController {
 
     // MARK: Send Post
     @IBOutlet var sendButton: NSButton!
+    var poster: Poster?
+
+    @IBAction func sendButtonAction(sender: NSButton?) {
+        sendMessage()
+    }
+
+    func sendMessage() {
+        let message = messageField.string ?? ""
+        poster?.postMessage(message)
+    }
 
 
 }

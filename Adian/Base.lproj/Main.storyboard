@@ -706,7 +706,7 @@
                                     </scrollView>
                                 </beginningViews>
                                 <endViews>
-                                    <stackView orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="yoH-PJ-uZV">
+                                    <stackView orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoH-PJ-uZV">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="29"/>
                                         <edgeInsets key="edgeInsets" left="8" right="8" top="0.0" bottom="8"/>
                                         <endViews>
@@ -719,6 +719,9 @@
 DQ
 </string>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="sendButtonAction:" target="XfG-lQ-9wD" id="eFj-7O-A0m"/>
+                                                </connections>
                                             </button>
                                         </endViews>
                                         <visibilityPriorities>

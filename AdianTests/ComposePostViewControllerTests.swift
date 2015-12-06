@@ -9,15 +9,26 @@
 import XCTest
 @testable import Adian
 
+
+class SpyPoster: Poster {
+    var receivedMessage: String?
+    func postMessage(message: String) {
+        receivedMessage = message
+    }
+}
+
+
 class ComposePostViewControllerTests: XCTestCase {
 
     var composePostViewController: ComposePostViewController!
-    
+    var spyPoster = SpyPoster()
+
     override func setUp() {
         super.setUp()
         composePostViewController = ComposePostViewController.instantiate()
+        composePostViewController.configure(spyPoster)
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
@@ -46,8 +57,24 @@ class ComposePostViewControllerTests: XCTestCase {
     }
 
 
+    func testPressingSendButtonSuppliesTextToPoster() {
+        let anyMessage = "testing!"
+        havingLoadedItsView()
+        havingTyped(anyMessage)
+
+        composePostViewController.sendButton.performClick(nil)
+
+        XCTAssertEqual(spyPoster.receivedMessage, anyMessage)
+    }
+
+
     func havingLoadedItsView() {
         _ = composePostViewController.view
+    }
+
+
+    func havingTyped(message: String) {
+        composePostViewController.messageField.insertText(message)
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5FABEE1C14C886008408A9 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABED1C14C886008408A9 /* Poster.swift */; };
 		3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */; };
 		3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */; };
 		3FB9E7701C0FE0F90075074E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E76F1C0FE0F90075074E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5FABED1C14C886008408A9 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		3FB9E7681C0FE0F90075074E /* Adian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */,
 				3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */,
+				3F5FABED1C14C886008408A9 /* Poster.swift */,
 				3FB9E76F1C0FE0F90075074E /* Assets.xcassets */,
 				3FB9E7711C0FE0F90075074E /* Main.storyboard */,
 				3FB9E7741C0FE0F90075074E /* Info.plist */,
@@ -254,6 +257,7 @@
 			files = (
 				3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */,
 				3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */,
+				3F5FABEE1C14C886008408A9 /* Poster.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
