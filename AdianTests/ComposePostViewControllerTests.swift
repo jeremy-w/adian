@@ -21,9 +21,21 @@ class ComposePostViewControllerTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-    
+
+
     func testKnowsItsStoryboardID() {
         // passes if we don't explode when as!'ing the ComposePostViewController in setUp()
+    }
+
+
+    func testHasASendButton() {
+        havingLoadedItsView()
+        XCTAssertNotNil(composePostViewController.sendButton, "nil sendButton")
+    }
+
+
+    func havingLoadedItsView() {
+        _ = composePostViewController.view
     }
     
 }

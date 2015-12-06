@@ -671,7 +671,36 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView orientation="vertical" alignment="trailing" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="x3o-jW-lRR">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <endViews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lO-N0-lji">
+                                        <rect key="frame" x="-6" y="-7" width="492" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeK-1b-SAy">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </endViews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="x3o-jW-lRR" secondAttribute="bottom" id="DqW-pe-H1n"/>
+                            <constraint firstAttribute="trailing" secondItem="x3o-jW-lRR" secondAttribute="trailing" id="KHR-o4-GZo"/>
+                            <constraint firstItem="x3o-jW-lRR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="OaD-lT-XmS"/>
+                            <constraint firstItem="x3o-jW-lRR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="bkG-I2-8Na"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sendButton" destination="7lO-N0-lji" id="P9z-3y-eBG"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
