@@ -13,39 +13,44 @@ class FoundationTaskTests: XCTestCase {
 
     func testDeliversProcessSuccessAfterCallingTrue() {
         task.command = ["/usr/bin/true"]
-        let expectingCompletion = expectationWithDescription("\(task) calls completion")
-        task.run { [weak expectingCompletion] (output, ok) -> Void in
+        runTaskAndCheckOnCompletion { (output, ok) -> Void in
             XCTAssertTrue(ok, "true should always exit successfully")
-            expectingCompletion?.fulfill()
         }
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
     }
 
 
     func testDeliversProcessFailureAfterCallingFalse() {
         task.command = ["/usr/bin/false"]
-        let expectingCompletion = expectationWithDescription("\(task) calls completion")
-        task.run { [weak expectingCompletion] (output, ok) -> Void in
+        runTaskAndCheckOnCompletion { (output, ok) -> Void in
             XCTAssertFalse(ok, "false should always exit unsuccessfully")
-            expectingCompletion?.fulfill()
         }
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
     }
 
 
     /// Tests it's feeding arguments in appropriately.
     func testDeliversStandardOutputWhenInvokedWithEcho() {
-        task.command = ["/usr/bin/false"]
-        let expectingCompletion = expectationWithDescription("\(task) calls completion")
-        task.run { [weak expectingCompletion] (output, ok) -> Void in
-            XCTAssertFalse(ok, "false should always exit unsuccessfully")
-            expectingCompletion?.fulfill()
+        task.command = ["/bin/echo"]
+        runTaskAndCheckOnCompletion { (output, ok) -> Void in
+
         }
-        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
     }
 
 
     /// Tests it's feeding stdin in appropriately.
     func xtestDeliversStandardOutputWhenInvokedWithCat() {
+    }
+}
+
+
+
+extension FoundationTaskTests {
+    func runTaskAndCheckOnCompletion(checks: (output: String, ok: Bool) -> Void) {
+        let expectingCompletion = expectationWithDescription("\(task) calls completion")
+        task.run { [weak expectingCompletion] (output, ok) -> Void in
+            expectingCompletion?.fulfill()
+
+            checks(output: output, ok: ok)
+        }
+        waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
     }
 }
