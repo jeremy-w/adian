@@ -6,6 +6,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 protocol Task {
     var command: [String] { get set }
     var input: String { get set }
+    var environment: [String: String] { get set }
 
     func run(completion: (output: String, ok: Bool) -> Void)
 }

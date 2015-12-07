@@ -15,6 +15,8 @@ extension Wry: Poster {
     func postMessage(message: String) {
         task.command = ["wry", "post"]
         task.input = message
+        task.environment = ["WRY_EDITOR": "STDIN"]
+
         task.run { (output, ok) -> Void in
             /* (jws/2015-12-06)TODO: pass result out */
         }

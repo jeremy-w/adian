@@ -9,8 +9,9 @@ import XCTest
 class SpyTask: Task {
     var command: [String] = []
     var input = ""
-    var completion = {(output: String, ok: Bool) -> Void in }
+    var environment: [String: String] = [:]
 
+    var completion = {(output: String, ok: Bool) -> Void in }
 
     func run(completion: (output: String, ok: Bool) -> Void) {
         /* pass */
@@ -33,5 +34,7 @@ class WryTests: XCTestCase {
         wry!.postMessage(AnyMessage)
         XCTAssertEqual(spyTask.command, "wry post".componentsSeparatedByString(" "))
         XCTAssertEqual(spyTask.input, AnyMessage)
+        XCTAssertTrue(spyTask.environment.contains { $0 == "WRY_EDITOR" && $1 == "STDIN" },
+            "environment missing WRY_EDITOR=STDIN: \(spyTask.environment)")
     }
 }
