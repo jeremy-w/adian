@@ -44,14 +44,21 @@ class FoundationTaskTests: XCTestCase {
 
 
 extension FoundationTaskTests {
-    @objc
     func runTaskAndCheckOnCompletion(checks: (output: String, ok: Bool) -> Void) {
         let expectingCompletion = expectationWithDescription("\(task) calls completion")
         task.run { [weak expectingCompletion] (output, ok) -> Void in
-            expectingCompletion?.fulfill()
+            guard let completion = expectingCompletion else {
+                // If any XCT assertion triggers a failure after the test has finished,
+                // the test process will crash with an exception complaining about
+                // `'Parameter "test" must not be nil.'`.
+                NSLog("completion is nil: aborting")
+                return
+            }
 
             checks(output: output, ok: ok)
+            completion.fulfill()
         }
+
         waitForExpectationsWithTimeout(defaultTimeout, handler: nil)
     }
 }
