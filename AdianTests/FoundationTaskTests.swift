@@ -28,10 +28,12 @@ class FoundationTaskTests: XCTestCase {
 
 
     /// Tests it's feeding arguments in appropriately.
-    func testDeliversStandardOutputWhenInvokedWithEcho() {
-        task.command = ["/bin/echo"]
+    func testDeliversStandardOutputWhenInvokedWithPrintf() {
+        let input = "howdy!\n"
+        task.command = ["/usr/bin/printf", input]
         runTaskAndCheckOnCompletion { (output, ok) -> Void in
-
+            XCTAssertTrue(ok, "printf should have run fine")
+            XCTAssertEqual(output, input)
         }
     }
 
