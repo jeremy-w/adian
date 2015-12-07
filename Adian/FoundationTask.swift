@@ -15,31 +15,43 @@ class FoundationTask: Task {
         task.launchPath = command.first
         task.arguments = Array(command[1..<command.count])
 
-        let pipe = NSPipe()
-        task.standardOutput = pipe
+        let inPipe = NSPipe()
+        task.standardInput = inPipe
+        inPipe.fileHandleForWriting.closeFile()
 
-        let stdout = pipe.fileHandleForReading
+        let outPipe = NSPipe()
+        task.standardOutput = outPipe
+
+        let group = dispatch_group_create()
+        dispatch_group_enter(group)  // readability handler
+        dispatch_group_enter(group)  // termination handler
+
+        let stdout = outPipe.fileHandleForReading
         let data = NSMutableData()
-        NSLog("READING!")
-        stdout.readabilityHandler = { (handle: NSFileHandle) in
-            NSLog("CALLED!")
-            let readData = handle.availableData
-            NSLog("read \(readData.length) bytes")
-
-            guard readData.length != 0 else {
-                NSLog("read EOF")
-                handle.readabilityHandler = nil
-                return
+        let queue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+        let channel = dispatch_io_create(DISPATCH_IO_STREAM, stdout.fileDescriptor, queue) { (did_error) -> Void in
+            stdout.closeFile()
+        }
+        dispatch_io_read(channel, 0, Int.max, queue) { (done, chunk, error) -> Void in
+            let chunkData = chunk as! NSData
+            NSLog("read \(chunkData.length) bytes")
+            data.appendData(chunkData)
+            if done {
+                NSLog("hit EOF - error \(error)")
+                dispatch_group_leave(group)
             }
-
-            data.appendData(readData)
         }
 
         task.terminationHandler = { task in
+            stdout.closeFile()
             NSLog("TERMINATED!")
             let ok = task.terminationStatus == 0
-            let output = self.decodeUTF8(data)
-            completion(output: output, ok: ok)
+            dispatch_group_notify(group, dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), { () -> Void in
+                NSLog("group finished")
+                let output = self.decodeUTF8(data)
+                completion(output: output, ok: ok)
+            })
+            dispatch_group_leave(group)
         }
         task.launch()
     }
