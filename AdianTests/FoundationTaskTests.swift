@@ -8,7 +8,7 @@ import XCTest
 
 class FoundationTaskTests: XCTestCase {
     let task = FoundationTask()
-    let defaultTimeout = 0.1 /* seconds */
+    let defaultTimeout = 0.5 /* seconds */
 
 
     func testDeliversProcessSuccessAfterCallingTrue() {
@@ -44,6 +44,7 @@ class FoundationTaskTests: XCTestCase {
 
 
 extension FoundationTaskTests {
+    @objc
     func runTaskAndCheckOnCompletion(checks: (output: String, ok: Bool) -> Void) {
         let expectingCompletion = expectationWithDescription("\(task) calls completion")
         task.run { [weak expectingCompletion] (output, ok) -> Void in
