@@ -13,7 +13,7 @@ class Wry {
 
 extension Wry: Poster {
     func postMessage(message: String) {
-        task.command = ["wry", "post"]
+        task.command = ["/usr/local/bin/wry", "post"]
         task.input = message
         task.environment = ["WRY_EDITOR": "STDIN"]
 

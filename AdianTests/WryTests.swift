@@ -32,7 +32,7 @@ class WryTests: XCTestCase {
 
     func testPostMessageConfiguresTaskToSend() {
         wry!.postMessage(AnyMessage)
-        XCTAssertEqual(spyTask.command, "wry post".componentsSeparatedByString(" "))
+        XCTAssertEqual(spyTask.command, "/usr/local/bin/wry post".componentsSeparatedByString(" "))
         XCTAssertEqual(spyTask.input, AnyMessage)
         XCTAssertTrue(spyTask.environment.contains { $0 == "WRY_EDITOR" && $1 == "STDIN" },
             "environment missing WRY_EDITOR=STDIN: \(spyTask.environment)")

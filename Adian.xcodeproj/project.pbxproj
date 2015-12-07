@@ -11,6 +11,8 @@
 		3F5FABF21C14CB22008408A9 /* WryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABF11C14CB21008408A9 /* WryTests.swift */; };
 		3F5FABF41C14D0A4008408A9 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABF31C14D0A4008408A9 /* Task.swift */; };
 		3F5FABF61C14D12C008408A9 /* Wry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABEF1C14CAA6008408A9 /* Wry.swift */; };
+		3F5FABFA1C152386008408A9 /* FoundationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABF91C152386008408A9 /* FoundationTask.swift */; };
+		3F5FABFC1C15243A008408A9 /* FoundationTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FABFB1C15243A008408A9 /* FoundationTaskTests.swift */; };
 		3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */; };
 		3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */; };
 		3FB9E7701C0FE0F90075074E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB9E76F1C0FE0F90075074E /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		3F5FABEF1C14CAA6008408A9 /* Wry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wry.swift; sourceTree = "<group>"; };
 		3F5FABF11C14CB21008408A9 /* WryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WryTests.swift; sourceTree = "<group>"; };
 		3F5FABF31C14D0A4008408A9 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3F5FABF91C152386008408A9 /* FoundationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationTask.swift; sourceTree = "<group>"; };
+		3F5FABFB1C15243A008408A9 /* FoundationTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationTaskTests.swift; sourceTree = "<group>"; };
 		3FB9E7681C0FE0F90075074E /* Adian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB9E76B1C0FE0F90075074E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB9E76D1C0FE0F90075074E /* ComposePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePostViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				3F5FABED1C14C886008408A9 /* Poster.swift */,
 				3F5FABEF1C14CAA6008408A9 /* Wry.swift */,
 				3F5FABF31C14D0A4008408A9 /* Task.swift */,
+				3F5FABF91C152386008408A9 /* FoundationTask.swift */,
 				3FB9E76F1C0FE0F90075074E /* Assets.xcassets */,
 				3FB9E7711C0FE0F90075074E /* Main.storyboard */,
 				3FB9E7741C0FE0F90075074E /* Info.plist */,
@@ -120,6 +125,7 @@
 			children = (
 				3FB9E77D1C0FE0F90075074E /* ComposePostViewControllerTests.swift */,
 				3F5FABF11C14CB21008408A9 /* WryTests.swift */,
+				3F5FABFB1C15243A008408A9 /* FoundationTaskTests.swift */,
 				3FB9E77F1C0FE0F90075074E /* Info.plist */,
 			);
 			path = AdianTests;
@@ -265,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB9E76E1C0FE0F90075074E /* ComposePostViewController.swift in Sources */,
+				3F5FABFA1C152386008408A9 /* FoundationTask.swift in Sources */,
 				3FB9E76C1C0FE0F90075074E /* AppDelegate.swift in Sources */,
 				3F5FABF61C14D12C008408A9 /* Wry.swift in Sources */,
 				3F5FABF41C14D0A4008408A9 /* Task.swift in Sources */,
@@ -278,6 +285,7 @@
 			files = (
 				3F5FABF21C14CB22008408A9 /* WryTests.swift in Sources */,
 				3FB9E77E1C0FE0F90075074E /* ComposePostViewControllerTests.swift in Sources */,
+				3F5FABFC1C15243A008408A9 /* FoundationTaskTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
