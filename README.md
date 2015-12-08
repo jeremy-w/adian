@@ -1,8 +1,10 @@
 # Adian, an OS X App.Net Interface
-Adian is a community-maintained App.Net interface for OS X.
+Adian is a community-maintained\* App.Net interface for OS X.
 
 Its initial author was [App.Net!jws](http://app.net/jws)
 (who happens to be @jeremy-w on GitHub).
+
+\* In theory. Some day. Right now, this is a bald-faced lie.
 
 
 ## Under Construction
