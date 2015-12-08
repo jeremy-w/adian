@@ -10,7 +10,9 @@ class FoundationTask: Task {
     var input = ""
     var environment: [String: String] = [:]
 
+    var monitor: ProcessMonitor?
     func run(completion: (output: String, ok: Bool) -> Void) {
+        precondition(self.monitor == nil, "\(self) is a one-shot task runner, and \(__FUNCTION__) has already been called once!")
         let task = NSTask()
         task.launchPath = command.first
         task.arguments = Array(command[1..<command.count])
@@ -22,37 +24,15 @@ class FoundationTask: Task {
         let outPipe = NSPipe()
         task.standardOutput = outPipe
 
-        let group = dispatch_group_create()
-        dispatch_group_enter(group)  // readability handler
-        dispatch_group_enter(group)  // termination handler
-
         let stdout = outPipe.fileHandleForReading
-        let data = NSMutableData()
-        let queue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
-        let channel = dispatch_io_create(DISPATCH_IO_STREAM, stdout.fileDescriptor, queue) { (did_error) -> Void in
-            stdout.closeFile()
-        }
-        dispatch_io_read(channel, 0, Int.max, queue) { (done, chunk, error) -> Void in
-            let chunkData = chunk as! NSData
-            NSLog("read \(chunkData.length) bytes")
-            data.appendData(chunkData)
-            if done {
-                NSLog("hit EOF - error \(error)")
-                dispatch_group_leave(group)
-            }
-        }
-
-        task.terminationHandler = { task in
-            stdout.closeFile()
-            NSLog("TERMINATED!")
+        let monitor = ProcessMonitor(task: task, output: stdout, whenDone: { (output, task) -> Void in
+            let string = self.decodeUTF8(output as! NSData)
             let ok = task.terminationStatus == 0
-            dispatch_group_notify(group, dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), { () -> Void in
-                NSLog("group finished")
-                let output = self.decodeUTF8(data)
-                completion(output: output, ok: ok)
-            })
-            dispatch_group_leave(group)
-        }
+            completion(output: string, ok: ok)
+        })
+        monitor.begin()
+        self.monitor = monitor
+
         task.launch()
     }
 
@@ -69,8 +49,75 @@ class FoundationTask: Task {
     }
 }
 
+
+
 extension FoundationTask: CustomDebugStringConvertible {
     var debugDescription: String {
         return "\(self.dynamicType)(command \(command) - input \"(input)\" - environment \(environment))"
+    }
+}
+
+
+
+/// Aggregates process output and termination status.
+class ProcessMonitor {
+    let task: NSTask
+    let output: NSFileHandle
+    let whenDone: (output: dispatch_data_t, task: NSTask) -> Void
+
+    /// Assumes ownership of `task.terminationHandler` and the file descriptor backing `output`.
+    init(task: NSTask, output: NSFileHandle, whenDone: (output: dispatch_data_t, task: NSTask) -> Void) {
+        self.task = task
+        self.output = output
+        self.whenDone = whenDone
+    }
+
+
+    /// Begins draining `output`.
+    func begin() {
+        registerTerminationHandler()
+        drainFileHandle()
+        asyncWaitTillDone()
+    }
+
+
+    private let group = dispatch_group_create()
+    private var data = dispatch_data_empty
+
+
+    private func registerTerminationHandler() {
+        dispatch_group_enter(group)
+
+        self.task.terminationHandler = { task in
+            NSLog("TERMINATED!")
+            dispatch_group_leave(self.group)
+        }
+    }
+
+
+    private func drainFileHandle() {
+        dispatch_group_enter(group)
+
+        let queue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+        let channel = dispatch_io_create(DISPATCH_IO_STREAM, output.fileDescriptor, queue) { (did_error) -> Void in
+            self.output.closeFile()
+        }
+        dispatch_io_read(channel, 0, Int.max, queue) { (done, chunk, error) -> Void in
+            NSLog("read \(dispatch_data_get_size(chunk)) bytes")
+            self.data = dispatch_data_create_concat(self.data, chunk)
+            if done {
+                NSLog("hit EOF - error \(error)")
+                dispatch_group_leave(self.group)
+            }
+        }
+    }
+
+
+    private func asyncWaitTillDone() {
+        let queue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
+        dispatch_group_notify(group, queue) { _ in
+            NSLog("group finished")
+            self.whenDone(output: self.data, task: self.task)
+        }
     }
 }
