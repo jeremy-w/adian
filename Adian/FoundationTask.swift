@@ -26,11 +26,10 @@ class FoundationTask: Task {
 
         let inPipe = NSPipe()
         task.standardInput = inPipe
-        /// (jws/2015-12-07)XXX: This is a blocking write.
-        /// If we write over a page-size, I suspect we'll freeze.
-        /// Converting to the writeability handler would likely fix it.
-        inPipe.fileHandleForWriting.writeData(inputData)
-        inPipe.fileHandleForWriting.closeFile()
+        inPipe.fileHandleForWriting.writeabilityHandler = { fileHandle in
+            fileHandle.writeData(inputData)
+            fileHandle.closeFile()
+        }
 
         let outPipe = NSPipe()
         task.standardOutput = outPipe
