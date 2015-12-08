@@ -89,7 +89,6 @@ class ProcessMonitor {
         dispatch_group_enter(group)
 
         self.task.terminationHandler = { task in
-            NSLog("TERMINATED!")
             dispatch_group_leave(self.group)
         }
     }
@@ -103,10 +102,8 @@ class ProcessMonitor {
             self.output.closeFile()
         }
         dispatch_io_read(channel, 0, Int.max, queue) { (done, chunk, error) -> Void in
-            NSLog("read \(dispatch_data_get_size(chunk)) bytes")
             self.data = dispatch_data_create_concat(self.data, chunk)
             if done {
-                NSLog("hit EOF - error \(error)")
                 dispatch_group_leave(self.group)
             }
         }
@@ -116,7 +113,6 @@ class ProcessMonitor {
     private func asyncWaitTillDone() {
         let queue = dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0)
         dispatch_group_notify(group, queue) { _ in
-            NSLog("group finished")
             self.whenDone(output: self.data, task: self.task)
         }
     }
