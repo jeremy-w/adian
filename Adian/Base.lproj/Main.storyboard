@@ -687,10 +687,10 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="minSize" width="478" height="231"/>
-                                                    <size key="maxSize" width="478" height="10000000"/>
+                                                    <size key="maxSize" width="480" height="10000000"/>
                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <size key="minSize" width="478" height="231"/>
-                                                    <size key="maxSize" width="478" height="10000000"/>
+                                                    <size key="maxSize" width="480" height="10000000"/>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -706,12 +706,12 @@
                                     </scrollView>
                                 </beginningViews>
                                 <endViews>
-                                    <stackView orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoH-PJ-uZV">
+                                    <stackView orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="yoH-PJ-uZV">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="29"/>
                                         <edgeInsets key="edgeInsets" left="8" right="8" top="0.0" bottom="8"/>
                                         <endViews>
                                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lO-N0-lji">
-                                                <rect key="frame" x="-6" y="-7" width="492" height="32"/>
+                                                <rect key="frame" x="-6" y="-7" width="72" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LeK-1b-SAy">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
