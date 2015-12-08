@@ -39,7 +39,14 @@ class FoundationTaskTests: XCTestCase {
 
 
     /// Tests it's feeding stdin in appropriately.
-    func xtestDeliversStandardOutputWhenInvokedWithCat() {
+    func testDeliversStandardOutputWhenInvokedWithCat() {
+        let input = "howdy!\n"
+        task.input = input
+        task.command = ["/bin/cat"]
+        runTaskAndCheckOnCompletion { (output, ok) -> Void in
+            XCTAssertTrue(ok, "cat should have run fine")
+            XCTAssertEqual(output, input, "should have piped input to output")
+        }
     }
 }
 

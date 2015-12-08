@@ -13,12 +13,23 @@ class FoundationTask: Task {
     var monitor: ProcessMonitor?
     func run(completion: (output: String, ok: Bool) -> Void) {
         precondition(self.monitor == nil, "\(self) is a one-shot task runner, and \(__FUNCTION__) has already been called once!")
+
+        guard let inputData = input.dataUsingEncoding(NSUTF8StringEncoding) else {
+            NSLog("\(self): failed to convert input string to UTF-8–encoded data")
+            completion(output: "", ok: false)
+            return
+        }
+
         let task = NSTask()
         task.launchPath = command.first
         task.arguments = Array(command[1..<command.count])
 
         let inPipe = NSPipe()
         task.standardInput = inPipe
+        /// (jws/2015-12-07)XXX: This is a blocking write.
+        /// If we write over a page-size, I suspect we'll freeze.
+        /// Converting to the writeability handler would likely fix it.
+        inPipe.fileHandleForWriting.writeData(inputData)
         inPipe.fileHandleForWriting.closeFile()
 
         let outPipe = NSPipe()
